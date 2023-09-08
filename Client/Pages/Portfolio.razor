@@ -11,11 +11,12 @@
     {
         <div class="PortfolioItem">
             <div class="PItemHeader">
-                    <img @onclick="()=>navigate(link)" style="height: 6pc;" src="@el.imgLink" />
+                    <img style="height: 6pc;" src="@el.imgPath" />
             </div>
             <div class="PItemContent">
-                <h5>@el.name</h5>
+                <h5><a href="@el.link">@el.name</a> </h5>
                 <p style="margin: 0.5pc 0 0 0;">@el.description</p>
+                <p></p>
              </div>
         </div>
     }
@@ -27,12 +28,14 @@
         {
             new PortfolioItem(
                 "TrainingJournal", 
-                "A traning journal app to register your daily workouts. Developed with AvaloniaUI, XAML, XML(to save the data), Linq, MVVM, ReactiveUI."
+                "A traning journal app to register your daily workouts. Developed with AvaloniaUI, XAML, XML(to save the data), Linq, MVVM, ReactiveUI.",
+                "https://github.com/DiegoCou/TrainingJournalAV11"
                 ),
             new PortfolioItem(
                 "My Web", 
                 "I designed this website using Figma, a website for easy prototyping of User interfaces. For the process of making the web I decided to use ASP.NET Blazor, It allowed me to practice HTML and CSS while still using C#.", 
-                "dc_icon2.svg"),
+                "dc_icon2.svg",
+                "https://github.com/DiegoCou/PortfolioStaticWebBlazor"),
     };
 
     private string link = "/";
